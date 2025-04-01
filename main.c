@@ -2,7 +2,7 @@
 #include <pthread.h>
 #include <unistd.h>
 
-#define NUM_USUARIOS 3
+#define NUM_USUARIOS 8
 
 pthread_mutex_t mutex_permissao; 
 
@@ -39,7 +39,12 @@ int main() {
     Usuario usuarios[NUM_USUARIOS] = {
         {1, 1}, // usuario 1 tem permissao
         {2, 0}, // usuario 2 NAO tem permissao
-        {3, 1}  // usuario 3 tem permissao
+        {3, 1}, // usuario 3 tem permissao
+        {4, 1}, // usuario 4 tem permissao
+        {5, 0}, // usuario 5 NAO tem permissao
+        {6, 0}, // usuario 6 NAO tem permissao
+        {7, 1}, // usuario 7 tem permissao
+        {8, 0}  // usuario 8 NAO tem permissao
     };
 
     pthread_mutex_init(&mutex_permissao,  NULL); // inicia o mutex
